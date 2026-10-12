@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Orders — Admin — Chandra Bazzar</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+  <div id="navbar"></div>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="sidebar-brand"><h3>🛒 Admin Panel</h3><p>Chandra Bazzar</p></div>
+      <nav class="sidebar-nav">
+        <div class="nav-section">Main</div>
+        <a href="/admin/dashboard.html"><span class="nav-icon">📊</span> Dashboard</a>
+        <div class="nav-section">Manage</div>
+        <a href="/admin/products.html"><span class="nav-icon">📦</span> Products</a>
+        <a href="/admin/orders.html" class="active"><span class="nav-icon">🧾</span> Orders</a>
+        <a href="/admin/users.html"><span class="nav-icon">👥</span> Users</a>
+        <div class="nav-section">Store</div>
+        <a href="/index.html"><span class="nav-icon">🏠</span> View Store</a>
+      </nav>
+    </aside>
+    <main class="admin-content">
+      <div class="admin-page-header"><div><h1>Orders</h1><p>Manage customer orders</p></div></div>
+      <div id="ordersContent"><div class="text-center" style="padding:40px"><div class="spinner" style="margin:auto"></div></div></div>
+    </main>
+  </div>
+  <script src="/js/app.js"></script>
+  <script src="/js/admin/orders.js"></script>
+</body>
+</html>

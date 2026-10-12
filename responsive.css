@@ -1,0 +1,139 @@
+/* ============================================
+   CHANDRA BAZZAR — Responsive Breakpoints
+   ============================================ */
+
+/* ── Tablet ── */
+@media (max-width: 1024px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .cart-container, .checkout-container { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .categories-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.4rem;
+    letter-spacing: -0.5px;
+  }
+
+  .hero {
+    padding: 60px 0;
+    min-height: 380px;
+  }
+
+  .hero p { font-size: 1rem; }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--primary-950);
+    flex-direction: column;
+    padding: 20px;
+    gap: 4px;
+    z-index: 999;
+    box-shadow: var(--shadow-2xl);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    animation: mobileNavIn 0.3s ease;
+  }
+
+  @keyframes mobileNavIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .nav-links.active { display: flex; }
+  .hamburger { display: flex; }
+
+  .categories-grid { grid-template-columns: repeat(2, 1fr); }
+  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+  .admin-sidebar {
+    display: none;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    bottom: 0;
+    z-index: 2000;
+    width: 280px;
+  }
+
+  .admin-sidebar.active { display: block; }
+  .admin-content { padding: 20px 16px; }
+
+  .form-row { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+
+  .search-filter-bar {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .search-input-wrapper {
+    min-width: 100%;
+  }
+
+  .filter-tabs { width: 100%; justify-content: center; }
+  .hero-btns { flex-direction: column; align-items: center; gap: 12px; }
+
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .cart-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .page-header h1 { font-size: 1.7rem; }
+  .section-header h2 { font-size: 1.7rem; }
+  .section { padding: 48px 0; }
+
+  .auth-card {
+    padding: 36px 28px;
+  }
+
+  .modal {
+    padding: 28px 24px;
+    border-radius: var(--radius-xl);
+  }
+}
+
+/* ── Small Mobile ── */
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.9rem; }
+  .products-grid { grid-template-columns: 1fr; }
+  .categories-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .navbar-brand { font-size: 1.15rem; }
+  .navbar-brand small { display: none; }
+  .stats-grid { grid-template-columns: 1fr; }
+
+  .hero-content .badge { font-size: 0.75rem; padding: 8px 16px; }
+  .btn-lg { padding: 14px 28px; font-size: 0.9rem; }
+
+  .admin-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .category-card { padding: 24px 16px; }
+  .category-card .icon {
+    width: 54px;
+    height: 54px;
+    font-size: 1.8rem;
+  }
+
+  .cart-summary {
+    padding: 24px;
+  }
+
+  .checkout-form {
+    padding: 24px;
+  }
+}
